@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "RedditCommentsNuker",
+    "version": "1.1",
+
+    "description": "Deletes all your reddit comments",
+
+    "content_scripts": [
+        {
+            "matches": ["*://old.reddit.com/user/*/comments*"],
+            "js": ["nuke.js"],
+            "run_at": "document_start"
+        }
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{daf44bf6-b45e-4450-979c-91cf07434c3a}"
+        }
+    }
+}
+
